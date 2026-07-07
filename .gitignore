@@ -1,0 +1,32 @@
+# Environnement Python
+# Fichiers de cache compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dossiers d'environnements virtuels (si vous en utilisez un)
+venv/
+env/
+.venv/
+Pipfile.lock
+
+# Fichiers de Logs
+# Ignore les fichiers de log générés par le script de réentraînement (Cron)
+*.log
+cron_log.log
+
+# Fichiers Système & IDE
+# Fichiers invisibles macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fichiers de configuration des éditeurs de code (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.swp
+
+# Base de Données & Modèles ML
+# Bases de données SQLite locales (au cas où)
+*.db
+*.sqlite3
