@@ -1,8 +1,8 @@
 # SocialMetrics AI - API d'Analyse de Sentiments
 
-[span_0](start_span)Ce projet propose une API REST développée avec Flask permettant d'évaluer le sentiment des opinions exprimées sur X (anciennement Twitter)[span_0](end_span). [span_1](start_span)Il s'inscrit dans le cadre du développement d'un service pour l'entreprise fictive SocialMetrics AI[span_1](end_span).
+Ce projet propose une API REST développée avec Flask permettant d'évaluer le sentiment des opinions exprimées sur X (anciennement Twitter). Il s'inscrit dans le cadre du développement d'un service pour l'entreprise fictive SocialMetrics AI.
 
-[span_2](start_span)Le modèle de Machine Learning sous-jacent est basé sur une Régression Logistique (Scikit-learn)[span_2](end_span) [span_3](start_span)et renvoie un score de sentiment compris entre -1 (très négatif) et 1 (très positif)[span_3](end_span).
+Le modèle de Machine Learning sous-jacent est basé sur une Régression Logistique (Scikit-learn)et renvoie un score de sentiment compris entre -1 (très négatif) et 1 (très positif).
 
 ## Prérequis
 
@@ -10,7 +10,7 @@ Pour faire tourner ce projet sur votre machine, vous aurez besoin de :
 - **Python 3.8+**
 - **Un serveur MySQL local actif** (MAMP, WAMP, Docker, ou installation native)
 
-> **Note importante :** L'application est conçue pour être "plug-and-play". [span_4](start_span)[span_5](start_span)Les scripts Python se chargeront automatiquement de créer la base de données et les tables nécessaires[span_4](end_span)[span_5](end_span).
+> **Note importante :** L'application est conçue pour être "plug-and-play". Les scripts Python se chargeront automatiquement de créer la base de données et les tables nécessaires.
 
 ## Installation et Configuration
 
