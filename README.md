@@ -10,13 +10,11 @@ Pour faire tourner ce projet sur votre machine, vous aurez besoin de :
 - **Python 3.8+**
 - **Un serveur MySQL local actif** (MAMP, WAMP, Docker, ou installation native)
 
-> **Note importante :** L'application est conçue pour être "plug-and-play". Les scripts Python se chargeront automatiquement de créer la base de données et les tables nécessaires.
-
 ## Installation et Configuration
 
 **1. Cloner le dépôt et se placer dans le dossier**
 ```bash
-git clone <URL_DE_VOTRE_REPO>
+git clone https://github.com/Lowinne/SocialMetrics-AI.git
 cd SocialMetrics-AI
 ```
 
@@ -24,22 +22,56 @@ cd SocialMetrics-AI
 ```bash
 python3 -m pip install -r requirements.txt
 ```
+ou
+```bash
+python -m pip install -r requirements.txt
+```
 
 **3. Configurer la base de données**
 Ouvrez le fichier config.py à la racine du projet et ajustez les identifiants pour qu'ils correspondent à votre serveur MySQL local. Par défaut, la configuration est :
 ```python
 DB_HOST = "127.0.0.1"
 DB_USER = "root"
-DB_PASSWORD = "" # Modifiez ici si votre root possède un mot de passe
+DB_PASSWORD = "" 
 DB_NAME = "socialmetrics_db"
 ```
 
 ## Exécution du Projet
+
+**Etape 0 : Démarrer le service MySQL selon votre OS ***
+Avant d'exécuter l'application, assurez-vous que votre serveur MySQL local est actif. Voici comment le lancer :
+
+#### Sur macOS (via Homebrew)
+Si vous avez installé MySQL avec Homebrew, ouvrez votre terminal et exécutez :
+```bash
+brew install mysql
+
+# Vérifier le statut des services
+brew services list
+
+# Démarrer le service MySQL
+brew services start mysql
+```
+#### Sur Windows (PC)
+Il faut MySQL d'installer sur le PC
+Via l'invite de commandes en mode Administrateur
+```bash
+net start mysql
+```
+ou
+```bash
+net start MySQL80
+``` 
+
 **Etape 1 : Initialisation de la BDD et Entraînement du modèle+**
+ **Note importante :** Attention Il faut que les informations dans config.py soit bonne !! (DB_USER & DB_PASSWORD)
 Avant de lancer l'API, il est impératif d'initialiser l'environnement. Exécutez le script suivant :
 ```bash
 python3 train_initial.py
 ```
+
+
+
 Ce script effectue les actions suivantes :
 	1.	Connexion au serveur MySQL et création automatique de la base socialmetrics_db et de la table tweets.
 	2.	Injection d'un jeu de données de test (si la table est vide).
