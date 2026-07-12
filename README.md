@@ -41,6 +41,7 @@ Une fois les conteneurs lancés, le modèle d'analyse a besoin d'être entraîn�
 docker-compose exec api python train_initial.py
 ```
 Ce script va créer la table tweets, y insérer un jeu de données de test, entraîner la Régression Logistique et générer les fichiers .joblib.
+Si erreur MYSQL sur PC, attendre 15s et réessayer 
 
 **5. Redémarrer l'API pour charger le modèle**
 
