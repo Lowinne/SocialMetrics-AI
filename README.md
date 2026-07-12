@@ -50,13 +50,13 @@ docker-compose restart api
 ```
 ### Tester l'API
 L'API est maintenant prête à écouter sur le port local 5000. Vous pouvez tester l'endpoint POST /analyze avec la commande suivante :
-Sur Mac / Linux :
+Sur Mac / Linux / Git Bash :
 ```bash
 curl -X POST http://localhost:5000/analyze \
      -H "Content-Type: application/json" \
      -d '{"tweets": ["I love this product, it is absolutely amazing!", "This service is completely broken and terrible."]}'
 ```
-Sur Windows (Invite de commandes) :
+Sur invite de commandes Windows (Et non powershell) :
 ```bash
 curl -X POST http://localhost:5000/analyze -H "Content-Type: application/json" -d "{\"tweets\": [\"I love this product, it is absolutely amazing!\", \"This service is completely broken and terrible.\"]}"
 ```
